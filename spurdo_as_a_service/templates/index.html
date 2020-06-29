@@ -1,0 +1,36 @@
+{#
+  This file is part of spurdo-as-a-service.
+
+  spurdo-as-a-service is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  spurdo-as-a-service is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with spurdo-as-a-service.  If not, see <https://www.gnu.org/licenses/>.
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spurdo as a Service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="wat de fugg">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/spurdo.png') }}"/>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+          integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/spurdo.css') }}">
+</head>
+<body>
+<div class="text-center">
+    <img src="{{ url_for('static', filename='img/spurdo.png') }}" alt="spurdo">
+    <p><b>Usage:</b> <a href="{{ base_url }}?text=what+the+fuck">{{ base_url }}?text=what+the+fuck</a></p>
+    <p><b>Output:</b> what de fugg</p>
+</div>
+</body>
+</html>

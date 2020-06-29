@@ -94,6 +94,7 @@ def translate_to_spurdo(input_text: str):
         input_text = input_text.replace(key, value)
 
     for symbol in ['!', '.', ',', '?']:
-        input_text = input_text.replace(symbol, f' {random.choice(EBIN_FACES)}')
+        while symbol in input_text:
+            input_text = input_text.replace(symbol, f' {random.choice(EBIN_FACES)}', 1)
 
     return input_text

@@ -30,8 +30,8 @@
 <body>
 <div class="text-center">
     <img src="{{ url_for('static', filename='img/spurdo.png') }}" alt="spurdo">
-    <p><b>Usage:</b> <a href="{{ base_url }}?text=what+the+fuck">{{ base_url }}?text=what+the+fuck</a></p>
-    <p><b>Output:</b> what de fugg</p>
+    <h3>Usage</h3>
+    <p>Either make a HTTP GET request to <a href="{{ base_url }}?text=what+the+fuck">{{ base_url }}?text=what+the+fuck</a>, or a POST request to {{ base_url }} with the <code>text</code> form field.</p>
     <a class="github-fork-ribbon" href="https://github.com/TheReverend403/spurdo-as-a-service" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 </div>
 </body>

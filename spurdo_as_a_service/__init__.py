@@ -78,12 +78,12 @@ def create_app():
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     app = Flask('spurdo-as-a-service', template_folder=f'{BASE_DIR}/templates', static_folder=f'{BASE_DIR}/static')
 
-    @app.route('/')
+    @app.route('/', methods=['GET', 'POST'])
     def index():
-        if 'text' not in request.args or not request.args['text']:
+        if 'text' not in request.values or not request.values['text']:
             return render_template('index.html', base_url=request.base_url)
 
-        input_text = request.args['text']
+        input_text = request.values['text']
         return translate_to_spurdo(input_text)
 
     return app

@@ -20,9 +20,9 @@ jobs:
           python-version: 3.8
 
       - name: Install Poetry
-        uses: dschep/install-poetry-action@v1.3
+        uses: abatilo/actions-poetry@v1.5.0
         with:
-          version: 1.0
+          poetry_version: 1.0
 
       - name: Cache Poetry virtualenv
         uses: actions/cache@v1

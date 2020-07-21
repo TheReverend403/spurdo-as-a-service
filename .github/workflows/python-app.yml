@@ -27,7 +27,6 @@ jobs:
 
       - name: Configure Poetry
         run: |
-          poetry config virtualenvs.in-project false
           poetry config virtualenvs.path ~/.virtualenvs
 
       - name: Cache virtualenv
